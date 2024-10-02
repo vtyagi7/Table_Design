@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9f440c319b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Table Design</title>
+</head>
+<body>
+    <div class="container">
+        <main class="tableSupplies">
+            <section class="tableHead">
+                <div>
+                    <h1>CHEMICAL SUPPLIES</h1>
+                </div>
+                
+                <div class="iconBar">
+                    <i id="add" class="fa fa-regular fa-plus" style="font-size:30px"></i>
+                    <i id="moveUp" class="fa fa-solid fa-arrow-up " style="font-size:30px"></i></i>
+                    <i id="moveDown" class="fa fa-solid fa-arrow-down " style="font-size:30px"></i>
+                    <i id="delete" class="fa fa-trash-o" style="font-size:30px"></i>
+                    <i id="edit" class="fa fa-solid fa-edit" style="font-size:30px"></i>
+                    <i id="save" class="fa fa-save" style="font-size:30px;"></i>
+                </div>
+
+                
+            </section>
+            <dialog id="addialog">
+                <div >
+                    <form class="add_form">
+                        <div class="formHeading">
+                        <h3>ADD DETAILS</h3>
+                        </div>
+                        <div class="form_add">
+                            
+                                <div class="box">
+                                    <label> Chemical Name:</label>
+                                    <input type="chemicalName" placeholder="Chemical Name">
+                                </div>
+                                
+                                <div class="box">
+                                    <label>Vendor:</label>
+                                    <input type="vender" placeholder="Vendor">
+                                </div>
+
+                                
+                                <div class="box">
+                                    <label>Density in g/m<sup>3</sup>:</label>
+                                    <input type="density" placeholder="Density">
+                                </div>
+
+                                
+                                <div class="box">
+                                    <label>Viscosity in kg/ms:</label>
+                                    <input type="viscosity" placeholder="Viscosity">
+                                </div>
+
+                                
+                                <div class="box">
+                                    <label>Packaging:</label>
+                                    <input type="packaging" placeholder="Packaging">
+                                </div>
+
+                                
+                                <div class="box">
+                                    <labe>Pack Size:</labe>
+                                    <input type="packSize" placeholder="Pack Size">
+                                </div>
+
+                                
+                                <div class="box">
+                                    <label>Unit:</label>
+                                    <input type="unit" placeholder="Unit">
+                                </div>
+
+                               
+                                <div class="box">
+                                    <label>Quantity:</label>
+                                    <input type="quantity" placeholder="Quantity">
+                                </div>
+
+                            
+                        </div>    
+                        <button id="addButton"> Add Data</button>
+                    </form>
+                </div>
+            </dialog>
+
+            <dialog id="deleteDialog">
+                <div class="confirm">
+                    <h3> ARE YOUR SURE YOU WANT TO DELETE THE RECORD ?</h3>
+                    <div class="buttonBox">
+                        <button id="notbutton"> Cancel </button>
+                        <button id="yesbutton"> Delete </button>
+                    </div>
+                </div>
+               
+                
+            </dialog>
+    
+            <section class="tableBody">
+                <table id="tableData">
+                    <thead>
+                        <tr>
+                            <th data-value="chemicalName" >Chemical Name <i class="fa fa-solid fa-caret-up"></i></th>
+                            <th data-value="vender" >Vendor <i class="fa fa-solid fa-caret-up"></i></th>
+                            <th data-value="density">Density in g/m<sup>3</sup> <i class="fa fa-solid fa-caret-up"></i></th>
+                            <th data-value="viscosity">Viscosity in kg/ms <i class="fa fa-solid fa-caret-up"></i></th>
+                            <th data-value="packaging">Packaging <i class="fa fa-solid fa-caret-up"></i></th>
+                            <th data-value="packSize">Pack Size <i class="fa fa-solid fa-caret-up"></i></th>
+                            <th data-value="unit">Unit <i class="fa fa-solid fa-caret-up"></i></th>
+                            <th data-value="quantity">Quantity <i class="fa fa-solid fa-caret-up"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+    
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
